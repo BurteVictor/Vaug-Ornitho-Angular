@@ -111,15 +111,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Vaug-Ornitho-Angular:serve"
+            "devServerTarget": "Vaug-Ornitho:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Vaug-Ornitho-Angular:serve:production"
+              "devServerTarget": "Vaug-Ornitho:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "Vaug-Ornitho-Angular"
+  "defaultProject": "Vaug-Ornitho"
 }
