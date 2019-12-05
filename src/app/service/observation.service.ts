@@ -20,4 +20,12 @@ export class ObservationService {
   getSingleObs(id: number): Observable<Observation> {
     return this.http.get<Observation>(`${this.baseUrl + '/observations/' + id}`);
   }
+  deleteObs(id: number): Observable<Observation> {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    };
+    return this.http.delete<Observation>(this.baseUrl + '/observations/' + id, httpOptions);
+  }
 }

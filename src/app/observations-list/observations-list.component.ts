@@ -27,4 +27,11 @@ export class ObservationsListComponent implements OnInit {
           e => console.log(e));
     }
   }
+  delete(id: number): void {
+    this.observationService.deleteObs(id).subscribe(_ => {
+      this.observations = this.observations.filter((observation: Observation) => observation.id !== id);
+    }, error => {
+      console.log(error);
+    });
+  }
 }
