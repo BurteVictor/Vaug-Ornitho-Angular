@@ -1,1 +1,36 @@
-<p>observations-list works!</p>
+<div style="margin-left: 50px">
+  <label for="site-search">Search an animal:</label>
+  <input type="search" id="site-search" name="filter"
+         [(ngModel)]="filter"
+         [ngModelOptions]="{standalone: true}"
+         onchange="this.value = this.value.charAt(0).toLowerCase();" aria-label="Search through site content">
+  <button routerLink="/listobservations/{{filter}}" id="loupe" type="button" class="icone" ></button>
+
+  <ul class="list-group ">
+
+  </ul>
+
+  <table class="table table-hover table-dark">
+    <thead>
+    <tr>
+      <th scope="col">Commun name</th>
+      <th scope="col">Genre</th>
+      <th scope="col">Species</th>
+      <th scope="col">Details</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr *ngFor="let observation of observations">
+      <td>{{observation.vulgarName}}</td>
+      <td>{{observation.genre}}</td>
+      <td>{{observation.species}}</td>
+      <td><a routerLink="/single_observation/{{observation.id}}/{{observation.vulgarName}}">Show more</a></td>
+      <td>
+        <img id="rip" src="https://img.icons8.com/cute-clipart/64/000000/headstone.png" type="button">
+      </td>
+    </tr>
+
+    </tbody>
+  </table>
+</div>

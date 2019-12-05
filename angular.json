@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -89,6 +90,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -111,15 +113,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Vaug-Ornitho:serve"
+            "devServerTarget": "Vaug-Ornitho-Angular:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Vaug-Ornitho:serve:production"
+              "devServerTarget": "Vaug-Ornitho-Angular:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "Vaug-Ornitho"
+  "defaultProject": "Vaug-Ornitho-Angular"
 }

@@ -1,0 +1,10 @@
+.addobs {
+  color: forestgreen;
+  text-align: center;
+  font-size: 60px;
+}
+#addobsform{
+  display: flex;
+  justify-content: center;
+}
+

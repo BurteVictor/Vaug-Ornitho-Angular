@@ -14,4 +14,10 @@ export class ObservationService {
   };
   private baseUrl = 'http://localhost:8080/api';
   constructor(private http: HttpClient) {}
+  getObservationList(): Observable<Observation []> {
+    return this.http.get<Observation []>(`${this.baseUrl + '/observations'}`);
+  }
+  getSingleObs(id: number): Observable<Observation> {
+    return this.http.get<Observation>(`${this.baseUrl + '/observations/' + id}`);
+  }
 }

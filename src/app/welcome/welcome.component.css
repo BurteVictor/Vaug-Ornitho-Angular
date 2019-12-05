@@ -1,0 +1,16 @@
+#homePicture{
+  height: 300px;
+}
+.homeBody{
+  display: flex;
+  justify-content: center;
+  position: center;
+  text-align: center;
+}
+h1{
+  text-align: center;
+  text-decoration: underline;
+  font-style: italic;
+  font-size: 80px;
+  margin-top: 30px;
+}

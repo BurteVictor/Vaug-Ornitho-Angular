@@ -5,4 +5,5 @@ export class Observation {
   vulgarName: string;
   imageUrl: string;
   description: string;
+  observationCounter: number;
 }

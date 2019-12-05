@@ -1,1 +1,49 @@
-<p>add-observation works!</p>
+<div style="display: block">
+  <h1 class="addobs">Add Observation</h1>
+</div>
+
+<form id="addobsform" [formGroup]="uploadForm" (ngSubmit)="onSubmit()">
+  <div>
+    <form #ngForm="ngForm">
+      <div>
+
+
+        <div style="margin-left: 65px">
+          <input type="file" name="birdPicture" (change)="onFileSelected($event)"/>
+        </div><br>
+
+
+        <p>
+          <label> Commun Name :
+            <input class="form-control" placeholder="Enter the Commun Name" style="border-color: #6AA84F; width:250px ;" type="text" [(ngModel)]="observation.vulgarName"
+                   [ngModelOptions]="{standalone: true}" name="vulgarName"
+                   onchange="this.value = this.value.charAt(0).toUpperCase() + this.value.substr(1);"/>
+          </label>
+        </p>
+        <p>
+          <label> Genre :
+            <input class="form-control" placeholder="Enter the scientific gender name" style="border-color: #6AA84F; width:250px ;" type="text" [(ngModel)]="observation.genre"
+                   [ngModelOptions]="{standalone: true}" name="genre"
+                   onchange="this.value = this.value.charAt(0).toUpperCase() + this.value.substr(1);"/>
+          </label>
+        </p>
+        <p>
+          <label> Species :
+            <input class="form-control" placeholder="Enter the scientific species name" style="border-color: #6AA84F; width:250px ;" type="text" [(ngModel)]="observation.species"
+                   [ngModelOptions]="{standalone: true}" name="species"
+                   onchange="this.value = this.value.charAt(0).toLowerCase() + this.value.substr(1);"/>
+          </label>
+        </p>
+        <p>
+          <label> Description :
+            <input class="form-control" placeholder="General description of this species" style="border-color: #6AA84F; width: 450px;height: 150px" type="text" [(ngModel)]="observation.description"
+                   [ngModelOptions]="{standalone: true}" name="description"
+                   onchange="this.value = this.value.charAt(0).toUpperCase() + this.value.substr(1);"/>
+          </label>
+        </p>
+      </div>
+    </form>
+    <br>
+    <button class="btn" class="btn btn-success" type=button (click)="submitForm()">Add animal</button>
+  </div>
+</form>
