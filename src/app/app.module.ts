@@ -15,7 +15,8 @@ const appRoutes: Routes = [
   { path: '', component: WelcomeComponent },
   { path: 'listobservations', component: ObservationsListComponent },
   { path: 'single_observation/:id/:vulgarName', component: SingleObservationComponent },
-  { path: 'new_observation', component: AddObservationComponent}
+  { path: 'new_observation', component: AddObservationComponent},
+  { path: 'all_experts', component: ExpertContactsComponent}
 ];
 @NgModule({
   declarations: [

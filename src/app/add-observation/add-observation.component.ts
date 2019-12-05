@@ -43,7 +43,6 @@ export class AddObservationComponent implements OnInit {
       (response) => console.log(response),
       (error) => console.log(error)
     );
-    this.gotoList();
   }
 
   gotoList() {

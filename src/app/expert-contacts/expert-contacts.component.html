@@ -1,1 +1,39 @@
-<p>expert-contacts works!</p>
+<div>
+  <h1> Contact an expert </h1>
+  <div class="homeBody">
+    <br>
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-secondary">Home</button>
+
+      <button routerLink="/listobservations" type="button" class="btn btn-secondary">Observations</button>
+
+      <button routerLink="/new_observation" type="button" class="btn btn-secondary">Add new Observation</button>
+      <button type="button" class="btn btn-secondary" routerLink="/all_experts">Contact</button>
+    </div>
+  </div>
+
+  <p></p>
+  <br>
+  <br>
+  <p></p>
+<div style="margin-left: 50px">
+  <table class="table table-hover table-dark">
+    <thead>
+    <tr>
+      <th scope="col">Expert Pseudo</th>
+      <th scope="col">email address</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr *ngFor="let user of users">
+      <td>{{user.pseudo}}</td>
+      <td>{{user.email}}</td>
+      <td>
+        <img id="rip" src="http://www.nuagedefarine.com/wp-content/uploads/2012/01/e-mail-enveloppe-icone.png" type="button" style="width: 50px;">
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</div>
