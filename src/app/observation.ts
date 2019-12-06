@@ -6,4 +6,7 @@ export class Observation {
   imageUrl: string;
   description: string;
   observationCounter: number;
+  day: string;
+  month: string;
+  year: string;
 }

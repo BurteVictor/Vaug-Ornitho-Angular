@@ -39,10 +39,14 @@ export class AddObservationComponent implements OnInit {
     formData.append('genre', this.observation.genre);
     formData.append('species', this.observation.species);
     formData.append('description', this.observation.description);
+    formData.append('day', this.observation.day);
+    formData.append('month', this.observation.month);
+    formData.append('year', this.observation.year);
     this.httpClient.post(this.baseUrl + '/observations/add', formData).subscribe(
       (response) => console.log(response),
       (error) => console.log(error)
     );
+    this.gotoList();
   }
 
   gotoList() {

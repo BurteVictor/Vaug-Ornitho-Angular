@@ -57,6 +57,43 @@
                        onchange="this.value = this.value.charAt(0).toUpperCase() + this.value.substr(1);"/>
               </label>
             </p>
+            <div style="display: inline-flex">
+              <p>
+                <label> Day of observation :
+                  <input class="form-control" style="border-color: #6AA84F; width: 30px;height: 20px" type="text" [(ngModel)]="observation.day"
+                         [ngModelOptions]="{standalone: true}" name="day"
+                         onchange="this.value = this.value.charAt(0).toUpperCase() + this.value.substr(1);"/>
+                </label>
+              </p>
+              <p style="margin-left: 50px">
+
+                <label for="month"> Month of observation :</label>
+                  <select style="width: 100px" id="month" class="form-control" type="text" [(ngModel)]="observation.month"
+                          [ngModelOptions]="{standalone: true}" name="month"
+                          onchange="this.value = this.value.charAt(0).toUpperCase() + this.value.substr(1);">
+                    <option>January</option>
+                    <option>February</option>
+                    <option>March</option>
+                    <option>April</option>
+                    <option>May</option>
+                    <option>June</option>
+                    <option>July</option>
+                    <option>August</option>
+                    <option>September</option>
+                    <option>October</option>
+                    <option>November</option>
+                    <option>December</option>
+                  </select>
+              </p>
+              <p style="margin-left: 50px">
+                <label> Year of observation :
+                  <input class="form-control" style="border-color: #6AA84F; width: 60px;height: 20px" type="text" [(ngModel)]="observation.year"
+                         [ngModelOptions]="{standalone: true}" name="year"
+                         onchange="this.value = this.value.charAt(0).toUpperCase() + this.value.substr(1);"/>
+                </label>
+              </p>
+            </div>
+
           </div>
         </form>
         <br>
