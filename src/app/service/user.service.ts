@@ -7,7 +7,7 @@ import {Injectable} from '@angular/core';
   providedIn: 'root'
 })
 export class UserService {
-  httpOptions = {
+   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
     })
@@ -16,6 +16,11 @@ export class UserService {
   constructor(private http: HttpClient) {}
 
   getExpertContacts(): Observable<User []> {
-    return this.http.get<User []>(`${this.baseUrl + '/experts'}`);
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    };
+    return this.http.get<User []>(`${this.baseUrl + '/users/experts'}`, httpOptions);
   }
 }
