@@ -2,6 +2,7 @@ import {Observable} from 'rxjs';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observation} from '../observation';
 import {Injectable} from '@angular/core';
+import {Dates} from '../Dates';
 
 @Injectable({
   providedIn: 'root'
@@ -27,5 +28,8 @@ export class ObservationService {
       })
     };
     return this.http.delete<Observation>(this.baseUrl + '/observations/' + id, httpOptions);
+  }
+  getSingleObseDates(id: number): Observable<Dates[]> {
+    return this.http.get<Dates[]>(`${this.baseUrl + '/observations/' + id + '/dates'}`);
   }
 }

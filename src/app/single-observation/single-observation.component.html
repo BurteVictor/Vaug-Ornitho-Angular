@@ -32,7 +32,9 @@
         </div>
         <br>
         <p class="card-text" style="text-align: center">{{observation.description}}</p>
-        <p class="card-text" style="text-align: center">{{observation.day}} of {{observation.month}} {{observation.year}}</p>
+        <tr *ngFor="let date of dates" class="homeBody">
+          <td class="homeBody">{{date.day}} {{date.month}} {{date.year}}</td>
+        </tr>
         <div class="sectionObs" style="text-align: center"><br>
           <a routerLink="/listobservations" style="margin: 50px">Go back to the list</a>
           <br>

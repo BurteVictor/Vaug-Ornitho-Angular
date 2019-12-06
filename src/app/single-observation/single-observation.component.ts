@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Observation} from '../observation';
 import {ObservationService} from '../service/observation.service';
 import {ActivatedRoute, Router} from '@angular/router';
+import {Dates} from '../Dates';
 
 @Component({
   selector: 'app-single-observation',
@@ -10,6 +11,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 })
 export class SingleObservationComponent implements OnInit {
   observation: Observation;
+  dates: Dates[];
   id: number;
   constructor(private observationService: ObservationService, private router: Router, private route: ActivatedRoute) { }
 
@@ -27,6 +29,12 @@ export class SingleObservationComponent implements OnInit {
           console.log(data);
         },
         e => console.log(e));
+    this.observationService.getSingleObseDates(this.id)
+      .subscribe(
+        data => {
+          this.dates = data;
+          console.log(data);
+        },
+        e => console.log(e));
   }
-
 }
